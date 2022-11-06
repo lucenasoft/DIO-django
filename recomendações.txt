@@ -1,0 +1,1 @@
+Criar venv com nome "dio_venv". - python -m venv dio_venv -
