@@ -5,18 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        body {
+            background: black;
+            color: white;
+        }
+
+    </style>
 </head>
 <body>
+    <a href="/logout">Sair</a>
+    <h1>AGENDAMENTOS</h1>
     {% for evento in eventos %}
-    {{evento.titulo}} 
+    titulo: {{evento.titulo}} 
     <br>
-    {{evento.descricao}}
+    descrição: {{evento.descricao}}
     <br>
-    {{evento.data_evento}}
+    data do evento: {{evento.data_evento}}
     <br>
-    {{evento.data_criacao}}
+    data da criação: {{evento.data_criacao}}
     <br>
-    {{evento.usuario}}
+    criador do evento: {{evento.usuario}}
     {% endfor %}
 </body>
 </html>
