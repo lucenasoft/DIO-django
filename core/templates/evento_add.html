@@ -20,11 +20,12 @@
     <h1>adicionar eventos</h1>
     <form action="submit" method="POST">
         {% csrf_token %}
-        <input type="text" name="titulo" >
+        <input type="number" name="id_evento" value=" {{ evento.id }} " hidden>
+        <input type="text" name="titulo" value="{{ evento.titulo }}">
         <br>
-        <input type="datetime-local" name="data_evento">
+        <input type="datetime-local" name="data_evento" value="{{ evento.data_evento }}">
         <br>
-        <textarea name="descricao" cols="30" rows="10"></textarea>
+        <textarea name="descricao" cols="30" rows="10" >{{ evento.descricao }}</textarea>
         <button type="submit">Salva</button>
         <a href="/agenda/">
             <button type="submit">Cancelar</button>

@@ -19,15 +19,9 @@
     <a href="/agenda/evento/">Adicionar evento</a>
     <h1>AGENDAMENTOS</h1>
     {% for evento in eventos %}
-    titulo: {{evento.titulo}} 
-    <br>
-    descrição: {{evento.descricao}}
-    <br>
-    data do evento: {{evento.data_evento}}
-    <br>
-    data da criação: {{evento.data_criacao}}
-    <br>
-    criador do evento: {{evento.usuario}}
+    <h1>{{evento.titulo}}</h1> 
+    <h2><a href="evento/?id={{ evento.id }}">Edit</a></h2>
+    <h2><a href="evento/delete/{{ evento.id }}">Deletar</a></h2>
     {% endfor %}
 </body>
 </html>
